@@ -3,7 +3,7 @@ import speech_recognition as sr
 import os
 import tkinter as tk
 from playsound import playsound
-co = cohere.Client('KcujpY0yBg7MG7MJUXf99foQFb3IBbjAZ7NQpxYX')
+co = cohere.Client('')
 
 r = sr.Recognizer()
 # limited to 50 requests per day so we might need to use recognize_sphinx
@@ -43,7 +43,7 @@ def generate(inp="hello"):
     )[0].prediction
     # c = f"Usr: {inp}" + "\nBot: "
     prompt = f"""
-    bot is an emotion support chat bot who wants to help the user feel better because user is {feelings},
+    bot is an emotion support voice assistant who wants to help the user feel better because user is {feelings},
     Usr: {inp}
     Bot:"""
     # chat_output = ""
@@ -88,15 +88,3 @@ while not input_finshed:
 
 def sentiment(input):
     pass
-
-# def generate(inp):
-#     c = f"""  
-#         Usr: {inp}
-#         Bot:
-#     """
-#     chat = str(chat) + str(c)
-#     print(chat)
-#     # gen = co.generate(  model='medium',  prompt = chat,  max_tokens=30,  temperature=0.6,  stop_sequences=["Usr"])
-#     # text = gen[0].text.split("Usr",1)
-#     # return text[0]
-#     return "Hello"-
