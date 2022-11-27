@@ -3,7 +3,10 @@ import speech_recognition as sr
 import os
 import tkinter as tk
 from playsound import playsound
-co = cohere.Client('')
+# from dotenv import load_env
+
+# load_env()
+co = cohere.Client("")
 
 r = sr.Recognizer()
 # limited to 50 requests per day so we might need to use recognize_sphinx

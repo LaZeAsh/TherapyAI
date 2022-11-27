@@ -1,5 +1,9 @@
 import speech_recognition as sr
 import os
+# import cohere
+# from cohere.classify import Example
+# co = cohere.Client('KcujpY0yBg7MG7MJUXf99foQFb3IBbjAZ7NQpxYX')
+
 r = sr.Recognizer()
 # use recognize_google() for google web speech api (no install req)
 # limited to 50 requests per day so we might need to use recognize_sphinx
@@ -15,6 +19,6 @@ while not input_finshed:
             print(speech)
             # testing to make it so that the system speaks something (won't be in this format)
             # look for alternatives to this it sounds too robot(y)
-            # os.system(f"say '{speech}'") # speaks out loud on the computer
+            os.system(f"say '{speech}'") # speaks out loud on the computer
     except:
         pass
